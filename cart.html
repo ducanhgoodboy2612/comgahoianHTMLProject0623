@@ -1,0 +1,234 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giỏ hàng</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700|Josefin+Sans:300,400,700">
+    <link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <script src="js/scipt.js"></script>
+
+    <script src="js/jquery-3.6.4.min.js" type="text/Javascript"></script>
+
+    <script>
+        function dec(x){
+            a = parseInt(document.getElementById(x).value);
+            if(a > 1) {
+                a -= 1;
+                // document.getElementById(p).textContent = price * (a) + " VNĐ";
+            }
+            document.getElementById(x).value = a;
+        }
+        // function inc(x){
+        //     a = parseInt(document.getElementById(x).value);
+        
+        //     document.getElementById(x).value = a + 1;
+        //      document.getElementById(p).textContent = pri * (a+1) + " VNĐ";
+        // }
+
+        function inc(btn) {
+            var row = btn.parentNode.parentNode;
+            var numtxt = row.querySelector('input[type="text"]');
+            var currentValue = parseInt(numtxt.value);
+            var newValue = currentValue + 1;
+            numtxt.value = newValue;
+            var price = parseInt(row.querySelector('td:nth-child(4)').textContent);
+            var total = price * newValue;
+            row.querySelector('#total').textContent = total + ".000 VNĐ";
+        }
+        function dec(btn) {
+            var row = btn.parentNode.parentNode;
+            var numtxt = row.querySelector('input[type="text"]');
+            var currentValue = parseInt(numtxt.value);
+            var newValue = currentValue - 1;
+            if (newValue < 1) {
+                newValue = 1;
+            }
+            numtxt.value = newValue;
+            var price = parseInt(row.querySelector('td:nth-child(4)').textContent);
+            var total = price * newValue;
+            row.querySelector('#total').textContent = total + ".000 VNĐ";
+        }
+        $(document).on("click", "img[src='img/remove.png']", function(){
+            $(this).parent().parent().remove();
+        });
+        $(document).ready(function(){
+            
+
+            var cart = sessionStorage.getItem("cart");
+            cartProducts = "["+cart+"]";
+            products = JSON.parse(cartProducts);
+            var amount = products.length;
+            //alert(amount);
+            //$("#cart-amount").text("Giỏ hàng ("+amount+")");
+            
+            var table = `
+            <table id="product-table" cellpadding="10px" cellspacing="20px" style="border: 1px solid; margin: 20px auto">
+                    <tr>
+                        <th>STT</th>
+                        <th>Ảnh</th>
+                        <th>Tên sản phẩm</th>
+                        <th>Đơn giá</th>
+                        <th>Số lượng</th>
+                        <th>Thành tiền</th>
+                        <th>Xóa</th>
+                    </tr>
+            `;
+            // alert(table);
+           
+
+            for(var i=0; i<amount; i++){
+                var row = `
+                    <tr>
+                        <td>${i+1}</td>
+                        <td><img style="width: 60px" src="${products[i].img}" ></td>
+                        <td>${products[i].name}</td>
+                        <td>${products[i].price}</td>
+                        <td>
+                            <input class="round-btn" style="width: 25px; height: 25px; border-radius: 50%;" type="button" value="-" onclick="dec(this)" />
+                            <input id="numtxt" style="width: 30px; height: 25px" type="text" value="${products[i].num}" />
+                            <input class="round-btn" style="width: 25px; height: 25px; border-radius: 50%;" type="button" value="+" onclick="inc(this)"/>
+                        </td>
+                        <td><p id="total">${products[i].total}</td>
+
+                        <td>
+                            <img src="img/remove.png" style="width: 20px" >
+                        </td>
+                    </tr>
+                `;
+                
+                table += row;
+            }
+            
+            table += `</table>`;
+            // var rows = document.querySelectorAll('#product-table tbody tr');
+            // rows.forEach(function(row) {
+            // var qty = parseInt(row.querySelector('input[type="text"]').value);
+            // var price = parseInt(row.querySelector('td:nth-child(4)').textContent);
+            // var total = qty * price;
+            // row.querySelector('#total').textContent = total;
+            
+
+        //     $('input[id=numtxt]').each(function() {
+        // var numtxt = $(this);
+        // var row = numtxt.closest('tr');
+        // var price = parseInt(row.find('td:nth-child(4)').text());
+        // var num = parseInt(numtxt.val());
+        // var total = price * num;
+        // row.find('td:nth-child(6) p#total').text(total);
+        // });
+            
+            $("#content").html(table); 		
+    
+    });
+    </script>
+
+</head>
+<body>
+    <section class="header" style="height: 150px;" >
+        <div class="container" >
+            <div id="top-page">
+                <img src="img/logock-removebg-preview.png" style="margin-left: 50px;">
+                <img src="resname.png" style="margin-left: 15px;">
+                <!-- <h1 id="res-name">CƠM GÀ HỘI AN</h1> -->
+                <div id="menu-bar">
+                    <ul>
+                        <li><a href="index.html">Trang chủ</a></li>
+                        <li><a href="menufo.html">Menu</a></li>
+                        <li><a href="blog.html">Blog</a></li>                    
+                        <li><button id="menu-btn">Đặt bàn</button></li>
+                        <div style="height: 80px; width: 180px; float: right;">
+                            <button class="small-btn">
+                                <img src="img/placeholder.png" style="height: 20px;">
+                            </button>
+                            <button class="small-btn">
+                                <img src="img/notification.png" style="height: 20px;">
+                            </button>
+                            <button class="small-btn">
+                                <img src="img/shopping-cart.png" style="height: 20px;">
+                            </button>
+                        </div>
+                    
+                    </ul>
+                </div>
+            </div>
+            <div>
+                <img src="img/slide4.jpg" style="width: 1340px; height: 200px;">
+            </div>
+        
+        
+        </div>
+    </section>
+
+    <section class="bg-grey" style="margin-top: 50px;">
+        <div class="container">
+            <div class="heading-section" style="text-align: center; margin-top: 60px;">
+                <h2>
+                    GIỎ HÀNG 
+                </h2>
+            </div>
+            <div id="content" style="width: 1140px; margin: 0px auto; min-height: 360px;">
+              
+        
+            </div>
+        </div>
+    </section>
+
+    <!-- <div>
+        <img src="img/footpic.jpg" style="height: 150px; width: 100%;">
+    </div> -->
+    <footer style="background-color: #333333; height: 250px;">
+      <div class="container">
+        <div class="row">
+          <!-- <div class="col-md-4">
+            <p class="footer-text">Chào mừng bạn đến với Cơm gà Hội An, chốn yên bình để cảm nhận hương vị đặc trưng của phố cổ</p>
+          </div> -->
+          <div class="foot-nav" style="margin-left: 100px;">
+            <h4>DANH MỤC MÓN ĂN</h4>
+            <ul class="list-unstyled">
+              <li><a href="#">Gà Hội An</a></li>
+              <li><a href="#">Gà chiên mắm</a></li>
+              <li><a href="#">Gà sốt / cà ri</a></li>
+              <li><a href="#">Món ăn kèm</a></li>
+              <li><a href="#">Nước uống</a></li>
+            </ul>
+          </div>
+          <div class="foot-nav" >
+              <h4>VỀ CƠM GÀ HỘI AN</h4>
+              <ul class="list-unstyled">
+                <li><a href="#">Câu chuyện của chúng tôi</a></li>
+                <li><a href="#">Giới thiệu</a></li>
+                <li><a href="#">Tin khuyến mãi</a></li>
+                <li><a href="#">Tin tuyển dụng</a></li>
+                <li><a href="#">Hệ thống nhà hàng</a></li>
+              </ul>
+            </div>
+          <div class="foot-nav" >
+            <h4>Liên hệ</h4>
+            <ul class="list-unstyled">
+              <li><i class="fas fa-map-marker-alt"></i> Địa chỉ: 27 Phạm Hồng Thái, TP.Hải Dương, tỉnh Hải Dương</li>
+              <li><i class="fas fa-phone"></i> Điện thoại: 0123456789</li>
+              <li><i class="fas fa-envelope"></i> Email: ducanh_comgahoianvietnam@gmail.com</li>
+            </ul>
+          </div>
+          <div class="foot-nav">
+              <img src="img/logo_footer.png" style="margin-top: 70px; margin-left: 20px;">
+          </div>
+        </div>
+    
+        <div class="row">
+          <div >
+            <p class="text-center">© 2023 Cơm gà Hội An. All rights reserved. Author: Pham Le Duc Anh</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+
+   
+</body>
+</html>

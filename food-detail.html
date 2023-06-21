@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Detail - Cơm gà Hội An</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+
+    <!-- Fonts -->
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700|Josefin+Sans:300,400,700">
+    <link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/food-detail.css">
+    <style>
+        .more-fo img {
+            cursor: pointer;
+        }
+
+        .more-fo a {
+            cursor: pointer;
+        }
+
+        #food-name {
+            margin-left: -11px;
+            margin-top: -10px;
+        }
+
+        .btn-addToCart {
+            height: 40px;
+            margin-top: 75px;
+            display: inline-block;
+            background-color: #f34949;
+            color: #fff;
+            border-radius: 10px;
+            padding: 9px 25px;
+            text-decoration: none;
+            border: none;
+            /* -webkit-transition: all 0.3s ease 0s;
+            -moz-transition: all 0.3s ease 0s;
+            -o-transition: all 0.3s ease 0s; */
+            transition: all 0.3s ease 0s;
+            position: absolute;
+            right: -10px;
+        }
+
+        .btn-addToCart:hover {
+            cursor: pointer;
+        }
+    </style>
+
+    
+
+</head>
+
+<body style="background-color: whitesmoke;">
+    <section class="header" style="height: 100px;">
+        <div class="container">
+            <div id="top-page">
+                <img src="img/logock-removebg-preview.png" style="margin-left: 50px;">
+                <img src="resname.png" style="margin-left: 15px;">
+                <!-- <h1 id="res-name">CƠM GÀ HỘI AN</h1> -->
+                <div id="menu-bar">
+                    <ul>
+                        <li><a href="index.html">Trang chủ</a></li>
+                        <li><a href="menufo.html">Menu</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><button id="menu-btn" onclick="reser()">Đặt bàn</button></li>
+                        <!-- <li><div>
+                            <img src="img/placeholder.png">
+                        </div></li> -->
+                        <div style="height: 80px; width: 180px; float: right;">
+                            <button class="small-btn">
+                                <img src="img/placeholder.png" style="height: 20px;">
+                            </button>
+                            <button class="small-btn">
+                                <img src="img/notification.png" style="height: 20px;">
+                            </button>
+                            <button class="small-btn" onclick="cart_direct()">
+                                <img src="img/shopping-cart.png" style="height: 20px;">
+                            </button>
+                        </div>
+
+                    </ul>
+                </div>
+            </div>
+            <div>
+                <img src="img/top-pic.jpg" style="width: 1340px; height: 242px;">
+            </div>
+
+
+        </div>
+    </section>
+    <section class="bg-white" style="margin-top: 210px; height: 1050px;">
+        <div class="container" style="width: 1140px; margin: 0px auto;">
+
+            <div class="row" style="height: 700px; margin-top: 80px;">
+                <div class="left-pic" style="width: 55%;">
+                    <img id="main-pic" src="img/menupic1.png" style="width: 95%;">
+                    <div class="row" style="height: 150px;">
+                        <h1>Các món khác</h1>
+                        <div class="more-fo">
+                            <img class="more-fo" src="img/menupic2.png" onclick="detail_direct(1)">
+                            <!-- thay đổi giá... -->
+                            <br><br><br>
+                            <p style="width: 100%;">Đùi gà chiên mắm</p>
+                        </div>
+                        <div class="more-fo">
+                            <img class="more-fo" src="img/menupic3.png" onclick="detail_direct(2)">
+                            <br><br><br>
+                            <p>Má đùi gà chiên mắm</p>
+                        </div>
+                        <div class="more-fo">
+                            <img class="more-fo" src="img/menupic1.png" onclick="detail_direct(3)">
+                            <br><br><br>
+                            <p>Gà Hội An</p>
+                        </div>
+
+
+                    </div>
+                    <div class="row" style="height: 300px;">
+                        <h1>Món ăn kèm và nước uống</h1>
+                        <div class="more-fo">
+                            <img class="more-fo" src="img/detail_hotdog.jpg">
+                            <br><br><br>
+                            <p style="width: 100%;">Xúc xích</p>
+                        </div>
+                        <div class="more-fo">
+                            <img class="more-fo" src="img/detail_chicsoup.jpg">
+                            <br><br><br>
+                            <p>Súp gà nấm</p>
+                        </div>
+                        <div class="more-fo">
+                            <img class="more-fo" src="img/detail_nam.jpg">
+                            <br><br><br>
+                            <p>Nấm hải sản chiên vừng dừa</p>
+                        </div>
+                        <div class="more-fo">
+                            <img class="more-fo" src="img/detail_drink.jpg">
+                            <br><br><br>
+                            <p>Nước ngọt các loại</p>
+                        </div>
+                        <div class="more-fo">
+                            <img class="more-fo" src="img/detail_beer.jfif">
+                            <br><br><br>
+                            <p>Bia lon</p>
+                        </div>
+
+
+                    </div>
+
+                    <button class="btn-primary" style="margin-left: -200px; margin-top: 30px;">Xem thêm...</button>
+
+                </div>
+                <div class="right-des"  style="width: 45%; position: relative;">
+                    <h1 class="special-number" id="food-name" style="margin-left: -10px;">Cơm gà Hội An</h1>
+                    <p id="food-description">Gạo để nấu cơm gà thường là loại gạo ngon của mảnh đất di sản miền Trung nắng gió nhưng đẫm vị
+                        thơm bùi. Gạo sau khi vo sạch sẽ được nấu với nước luộc gà và lá dứa bằng bếp củi để hạt mềm và
+                        thơm.
+
+                        Gà được chọn là loại gà tơ hay thả vườn vì chúng sẽ cho ra
+                        loại thịt chắc nhưng mềm chứ không bở, da có màu vàng óng. Gà khi được luộc xong thì đem xé phay
+                        bóp với hành tây, hành phi, muối và rau răm. Cơm được nấu bằng loại gạo ngon của mảnh đất di sản miền Trung nắng gió nhưng đẫm vị
+                        thơm bùi. Gạo sau khi vo sạch sẽ được nấu với nước luộc gà và lá dứa bằng bếp củi để hạt mềm và
+                        thơm. Cuối cùng là nước dùng được thêm nghệ và gấc để tạo
+                        màu khiến đĩa cơm càng vàng ươm thêm phần hấp dẫn.</p>
+                    <h3 class="spec-price" id="price">40.000 VNĐ</h3>
+                    <h4 class="del-price">48.000 VNĐ</h4>
+                    <div id="quan">
+                        <h2>Số lượng</h2>
+
+
+                        <input class="round-btn" type="button" value="-" onclick="dec('numtxt','total')">
+                        <input id="numtxt" type="text" value="1">
+                        <input class="round-btn" type="button" value="+" onclick="inc('numtxt','total')">
+
+
+                        <hr>
+
+                        <h3 style="float: left;">Tổng tiền</h3>
+                        <h2 id="total" style="float: right;">40.000 VNĐ</h2>
+
+
+                    </div>
+                    <button class="btn-addToCart"">Thêm vào giỏ hàng</button>
+
+                </div>
+            </div>
+        </div>
+    </section>
+   
+    <footer>
+        <div class=" container">
+                        <div class="row">
+
+                            <div class="foot-nav" style="margin-left: 100px;">
+                                <h4>DANH MỤC MÓN ĂN</h4>
+                                <ul class="list-unstyled">
+                                    <li><a href="#">Gà Hội An</a></li>
+                                    <li><a href="#">Gà chiên mắm</a></li>
+                                    <li><a href="#">Gà sốt / cà ri</a></li>
+                                    <li><a href="#">Món ăn kèm</a></li>
+                                    <li><a href="#">Nước uống</a></li>
+                                </ul>
+                            </div>
+                            <div class="foot-nav">
+                                <h4>VỀ CƠM GÀ HỘI AN</h4>
+                                <ul class="list-unstyled">
+                                    <li><a href="#">Câu chuyện của chúng tôi</a></li>
+                                    <li><a href="#">Giới thiệu</a></li>
+                                    <li><a href="#">Tin khuyến mãi</a></li>
+                                    <li><a href="#">Tin tuyển dụng</a></li>
+                                    <li><a href="#">Hệ thống nhà hàng</a></li>
+                                </ul>
+                            </div>
+                            <div class="foot-nav">
+                                <h4>Liên hệ</h4>
+                                <ul class="list-unstyled">
+                                    <li><i class="fas fa-map-marker-alt"></i> Địa chỉ: 27 Phạm Hồng Thái, TP.Hải Dương,
+                                        tỉnh Hải
+                                        Dương</li>
+                                    <li><i class="fas fa-phone"></i> Điện thoại: 0123456789</li>
+                                    <li><i class="fas fa-envelope"></i> Email: ducanh_comgahoianvietnam@gmail.com</li>
+                                </ul>
+                            </div>
+                            <div class="foot-nav">
+                                <img id="foot-logo" src="img/logock-removebg-preview.png">
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div>
+                                <p class="text-center"></p>
+                            </div>
+                        </div>
+                        <div id="bot-div">
+                            <img src="img/logo_footer.png">
+                            <p>© 2023 Cơm gà Hội An. All rights reserved. Author: Pham Le Duc Anh</p>
+                        </div>
+                </div>
+                </footer>
+
+
+    <script src="js/scipt.js"></script>
+    <script src="js/jquery-3.6.4.min.js" type="text/Javascript">
+
+    </script>
+    <script>
+        $(document).ready(function () {
+
+            $(".btn-addToCart").click(function () {
+                alert("Đã thêm món vào giỏ.");
+                var cartAmount = Number(sessionStorage.getItem("cartAmount"));
+                //alert(cartAmount);
+                if (cartAmount != null)
+                    cartAmount += 1;
+                else
+                    cartAmount = 1;
+                sessionStorage.setItem("cartAmount", cartAmount);
+
+
+                var pImg = $(this).parent().parent().find(".left-pic").find("#main-pic").attr("src");
+                var pName = $(this).parent().find("#food-name").text();
+                var pPrice = $(this).parent().find(".spec-price").text();
+                var pNum = $(this).parent().find("#quan").find("#numtxt").val();
+                var pTotal = $(this).parent().find("#quan").find("#total").text();
+                // var pTotal = (pNum * parseInt(pPrice.substring(0, pPrice.length - 4))).toString();
+
+                var product = {
+                    "img": pImg,
+                    "name": pName,
+                    "price": pPrice,
+                    "num": pNum,
+                    "total": pTotal
+                };
+
+                //alert(pImg +" "+pName+" "+pPrice+" "+pNum+" "+pTotal);
+                var cart = sessionStorage.getItem("cart");
+                var cartProducts = "";
+                if (cart != null) {
+                    cartProducts = cart + "," + JSON.stringify(product);
+                } else
+                    cartProducts = JSON.stringify(product);
+                sessionStorage.setItem("cart", cartProducts);
+                //alert(cartProducts);					
+            });
+
+        });
+    </script>
+
+    <script>
+
+        //trang detail 
+        window.onload = function () {
+            var urlParams = new URLSearchParams(window.location.search);
+            var msg = urlParams.get('msg');
+            if (msg == "dcm") {
+                var cont = "Những miếng đùi gà vàng ruộm, bóng bẩy thơm ngon dùng ăn cùng với cơm nghệ thơm phức" + 
+                "thì thật tuyệt. Từng miếng, từng miếng một chắc chắn sẽ khiến bạn gấp mãi không thôi. Bạn có thể  ăn " + 
+                "cùng với dưa chuột, chút xà lách hoặc cà chua để món ăn được trọn vị hơn. Hãy thử tưởng tượng xem, cắn" + 
+                " miếng đùi gà chiên mắm thơm lừng, ăn cùng miếng cơm dẻo nơi đầu lưỡi. Chắc hẳn mọi mệt mỏi, áp lực ngoài kia đều tan biến."
+                document.getElementById("food-name").textContent = "Đùi gà chiên mắm";
+                document.getElementById("food-description").textContent = cont;
+                document.getElementById('price').textContent = "45.000 VNĐ";
+                document.getElementById("main-pic").setAttribute("src", "img/menupic2.png");
+                document.getElementById('numtxt').value = 1;
+                document.getElementById('total').textContent = "45000 VNĐ";
+
+                price = 45000;
+            }
+            if (msg == "mcm") {
+                var cont = "Chiếc má đùi gà được chiên tới khi da giòn rụm, màu vàng. Thịt gà thấm đậm mắm và gia vị, tạo"+
+                " ra hương vị độc đáo. Kết hợp với rau sống và các loại gia vị khác, món này mang đến trải nghiệm thú vị" +  
+                " cho vị giác. Má đùi gà chiên mắm là sự lựa chọn tuyệt vời cho những ai muốn thưởng thức ẩm thực đậm đà" + 
+                " và trọn vị Hội An."
+                document.getElementById("food-name").textContent = "Má đùi gà chiên mắm";
+                document.getElementById("food-description").textContent = cont;
+                document.getElementById('price').textContent = "45.000 VNĐ";
+                document.getElementById("main-pic").setAttribute("src", "img/menupic3.png");
+                document.getElementById('numtxt').value = 1;
+                document.getElementById('total').textContent = "45000 VNĐ";
+                price = 45000;
+            }
+            if (msg == "gha") {
+                var cont = "Gà được chọn là loại gà tơ hay thả vườn vì chúng sẽ cho ra" +  
+                        " loại thịt chắc nhưng mềm chứ không bở, da có màu vàng óng. Gà khi được luộc xong thì đem xé phay" +
+                        " bóp với hành tây, hành phi, muối và rau răm. Cơm được nấu bằng loại gạo ngon của mảnh đất di sản miền Trung nắng gió nhưng đẫm vị" +                      
+                        " thơm. Cuối cùng là nước dùng được thêm nghệ và gấc để tạo" +
+                        " màu khiến đĩa cơm càng vàng ươm thêm phần hấp dẫn." 
+                document.getElementById("food-name").textContent = "Cơm gà Hội An";
+                document.getElementById("food-description").textContent = cont;
+                document.getElementById('price').textContent = "40.000 VNĐ";
+                document.getElementById("main-pic").setAttribute("src", "img/menupic1.png");
+                document.getElementById('numtxt').value = 1;
+                document.getElementById('total').textContent = "40000 VNĐ";
+                price = 40000;
+            }
+
+            //...
+        }
+    </script>
+
+
+</body>
+
+</html>

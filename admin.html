@@ -1,0 +1,251 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin-Cơm gà Hội An</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/admin.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <script src="js/scipt.js"></script>
+    <script src="js/jquery-3.6.4.min.js" type="text/Javascript"></script>
+</head>
+<body>
+    <div id="top-page">
+        <img src="img/logock-removebg-preview.png" style="margin-left: 50px;">
+        <img src="resname.png" style="margin-left: 15px;">
+        <!-- <h1 id="res-name">CƠM GÀ HỘI AN</h1> -->
+        <div id="menu-bar">
+            <ul>
+                <li><a href="index.html">Trang chủ</a></li>
+                <li><a href="menufo.html">Menu</a></li>
+                <li><a href="blog.html">Blog</a></li>                    
+                <li><button id="menu-btn">Đặt bàn</button></li>
+                <div style="height: 80px; width: 180px; float: right;">
+                    <button class="small-btn">
+                        <img src="img/login.png" style="height: 20px;">
+                    </button>
+                    <button class="small-btn">
+                        <img src="img/notification.png" style="height: 20px;">
+                    </button>
+                    <button class="small-btn">
+                        <img src="img/shopping-cart.png" style="height: 20px;">
+                    </button>
+                </div>
+            
+            </ul>
+        </div>
+    </div>
+    <div class="container">
+        <div id="left-side">
+            <div class="sidebar-menu">
+                <div class="sidebar">
+                    <ul class="menu">
+                        <li><a class="main-menu" href="admin-home.html">Trang chủ</a></li>
+        
+                        <li>
+                            <a class="main-menu" href="#">Bán hàng <i class="fas fa-caret-down"></i></a>
+                            <ul class="submenu">
+                                <li><a href="./QLSanPham.html">Danh sách sản phẩm</a></li>
+                                <li><a href="#">Khách hàng</a></li>
+                                <li><a href="#">Hóa đơn bán</a></li>
+                            </ul>
+                        </li>
+        
+                        <li>
+                            <a class="main-menu" href="#">Nhập hàng <i class="fas fa-caret-down"></i></a>
+                            <ul class="submenu">
+                                <li><a href="./QLNhapHang.html">Hóa đơn nhập</a></li>
+                                <li><a href="#">Hãng sản xuất</a></li>
+                                <li><a href="#">Nhà cung cấp</a></li>
+                            </ul>
+                        </li>
+        
+                        <li>
+                            <a class="main-menu" href="#">Danh mục<i class="fas fa-caret-down"></i></a>
+                            <ul class="submenu">
+                                <li><a href="#">Sản phẩm</a></li>
+                                <li><a href="#">Slide show</a></li>
+                                <li><a href="#">Quảng cáo</a></li>
+                                <li><a href="#">Người dùng</a></li>
+        
+                            </ul>
+                        </li>
+        
+                        <li><a class="main-menu" href="#">Tài khoản</a></li>
+        
+                    </ul>
+                </div>
+        
+            </div>
+        </div>
+        <div id="right-side">
+            <div class="heading-section" style="margin-top: 85px;">
+                <h2>
+                    QUẢN LÝ MENU 
+                </h2>
+            </div>
+            <div style="width: 100%; height: 50px;">
+                <button class="bt">THÊM MỚI</button>
+                <button class="bt">XÓA NHIỀU</button>
+            </div>
+            <div  style="width: 100%; margin-top: 20px;">
+                <table id="tb-pro" border="1" cellpadding = "10px" cellspacing = "0">
+                    <tr>
+                        <th>STT</th>
+                        <th><input type="checkbox"></th>
+                        <th>Mã món</th>
+                        <th>Tên món</th>
+                        <th>Loại</th>
+                        <th>Giá</th>
+                        <th>Khuyến mại</th>
+
+                        <th>Ngày đăng</th>
+                        <th>Xem</th>
+                        <th>Sửa</th>
+                        <th>Xóa</th>
+                    </tr>
+                    <tr> 
+                        <td>01</td>
+                        <td><input type="checkbox"></td>
+                        <td>HA001</td>
+                        <td>Cơm gà Hội An</td>
+                        <td>Gà Hội An</td>
+                        <td class="price">45.000 VNĐ</td>
+                        <td>10%</td>
+                        <td>26/12/2022</td>
+                        <td><img class="search" src="img/search.jpg"></td>
+                        <td><img class="change" src="img/change.jpg"></td>
+                        <td><img class="del" src="img/bin.jpg"></td>
+                    
+                    </tr>
+                    <tr class="even-row"> 
+                        <td>02</td>
+                        <td><input type="checkbox"></td>
+                        <td>HA002</td>
+                        <td>Cơm gà xé trộn</td>
+                        <td>Gà Hội An</td>
+                        <td class="price">45.000 VNĐ</td>
+                        <td>0</td>
+                        <td>26/12/2022</td>
+                        <td><img class="search" src="img/search.jpg"></td>
+                        <td><img class="change" src="img/change.jpg"></td>
+                        <td><img class="del" src="img/bin.jpg"></td>
+                    
+                    </tr>
+                    <tr > 
+                        <td>03</td>
+                        <td><input type="checkbox"></td>
+                        <td>CM001</td>
+                        <td>Cơm gà đùi gà chiên mắm</td>
+                        <td>Gà chiên mắm</td>
+                        <td class="price">50.000 VNĐ</td>
+                        <td>10%</td>
+                        <td>27/08/2021</td>
+                        <td><img class="search" src="img/search.jpg"></td>
+                        <td><img class="change" src="img/change.jpg"></td>
+                        <td><img class="del" src="img/bin.jpg"></td>
+                    
+                    </tr>
+                 
+                    <tr class="even-row"> 
+                        <td>04</td>
+                        <td><input type="checkbox"></td>
+                        <td>CM002</td>
+                        <td>Má đùi gà chiên mắm</td>
+                        <td>Gà chiên mắm</td>
+                        <td class="price">50.000 VNĐ</td>
+                        <td>5%</td>
+                        <td>26/08/2021</td>
+                        <td><img class="search" src="img/search.jpg"></td>
+                        <td><img class="change" src="img/change.jpg"></td>
+                        <td><img class="del" src="img/bin.jpg"></td>
+                    
+                    </tr>
+                    <tr> 
+                        <td>05</td>
+                        <td><input type="checkbox"></td>
+                        <td>CM003</td>
+                        <td>Cơm cánh gà chiên mắm</td>
+                        <td>Gà chiên mắm</td>
+                        <td class="price">40.000 VNĐ</td>
+                        <td>0</td>
+                        <td>26/08/2021</td>
+                        <td><img class="search" src="img/search.jpg"></td>
+                        <td><img class="change" src="img/change.jpg"></td>
+                        <td><img class="del" src="img/bin.jpg"></td>
+                    
+                    </tr>
+                    <tr class="even-row"> 
+                        <td>06</td>
+                        <td><input type="checkbox"></td>
+                        <td>GS001</td>
+                        <td>Cơm gà cà ri</td>
+                        <td>Gà sốt/cà ri</td>
+                        <td class="price">45.000 VNĐ</td>
+                        <td>0</td>
+                        <td>27/08/2021</td>
+                        <td><img class="search" src="img/search.jpg"></td>
+                        <td><img class="change" src="img/change.jpg"></td>
+                        <td><img class="del" src="img/bin.jpg"></td>
+                    
+                    </tr>
+                    <tr> 
+                        <td>07</td>
+                        <td><input type="checkbox"></td>
+                        <td>GS001</td>
+                        <td>Cơm gà sốt me </td>
+                        <td>Gà sốt/cà ri</td>
+                        <td class="price">45.000 VNĐ</td>
+                        <td>0</td>
+                        <td>27/08/2021</td>
+                        <td><img class="search" src="img/search.jpg"></td>
+                        <td><img class="change" src="img/change.jpg"></td>
+                        <td><img class="del" src="img/bin.jpg"></td>
+                    
+                    </tr>
+                </table>
+            </div>
+            <div style="width: 100%; height: 50px; display: inline-block; margin: 50px 360px;">
+                <a href="#" style="margin-left: 10px; text-decoration: none;">1</a>
+                <a href="#" style="margin-left: 10px; text-decoration: none;">2</a>
+                <a href="#" style="margin-left: 10px; text-decoration: none;">3</a>
+                <a href="#" style="margin-left: 10px; text-decoration: none;">4</a>
+                <a href="#" style="margin-left: 10px; text-decoration: none;">5</a>
+                <a href="#" style="margin-left: 10px; text-decoration: none;">6</a>
+            </div>
+        </div>
+    </div>
+    <script>
+        $(document).ready(function () {
+    
+            $(".submenu").hide();
+    
+            // Hiển thị submenu khi click vào menu item chứa submenu
+            $(".menu > li").click(function () {
+                
+                $(".submenu").not($(this).children(".submenu")).slideUp();
+
+                $(this).children(".submenu").stop(true, true).slideDown();
+            });
+        });
+        $(document).on("click", "img[src='img/bin.jpg']", function(){
+            if (confirm("Bạn có chắc chắn muốn xóa không?")) {
+                $(this).parent().parent().remove();
+            }
+        });
+        $(document).on("click", "img[src='img/change.jpg']", function(){
+            var currentPrice = $(this).parent().parent().find(".price").text();
+            //alert(currentPrice);
+            var newPrice = prompt("Nhập giá mới cho món ăn:", currentPrice);
+            if (newPrice != null) {
+                $(this).parent().parent().find(".price").text(newPrice);
+                alert("Cập nhật thành công !")
+            }
+        });
+    
+    </script>
+</body>
+</html>

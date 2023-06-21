@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Cơm gà Hội An - Trang chủ</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Fonts -->
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700|Josefin+Sans:300,400,700">
+    <link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <script src="js/scipt.js"></script>
+</head>
+
+<body>
+
+    <section class="header">
+        <div class="container">
+            <div id="top-page">
+                <img src="img/logock-removebg-preview.png" style="margin-left: 50px;">
+                <img src="resname.png" style="margin-left: 15px;">
+                <!-- <h1 id="res-name">CƠM GÀ HỘI AN</h1> -->
+                <div id="menu-bar">
+                    <ul>
+                        <li><a class="mnbar-item menu_active" onclick="selectMenuItem(this)">Trang chủ</a></li>
+                        <li><a class="mnbar-item" href="menufo.html" onclick="selectMenuItem(this)">Menu</a></li>
+
+                        <li><a class="mnbar-item" href="blog.html" onclick="selectMenuItem(this)">Blog</a></li>
+                        <li><button id="menu-btn" onclick="location.href = '#reservation'">Đặt bàn</button></li>
+                        <div style="height: 80px; width: 180px; float: right;">
+                            <button class="small-btn">
+                                <img src="img/user-interface.png" style="height: 20px;" onclick="login_direct()">
+                            </button>
+                            <button class="small-btn">
+                                <img src="img/notification.png" style="height: 20px;">
+                            </button>
+                            <button class="small-btn">
+                                <img src="img/shopping-cart.png" style="height: 20px;" onclick="cart_direct()">
+                            </button>
+                        </div>
+
+                    </ul>
+                </div>
+            </div>
+            <div id="slideshow">
+                <img id="slide" src="img/slide1.png">
+                <button id="slide-prev" onclick="back()">
+                    <i class="fa fa-angle-left"></i>
+                </button>
+                <button id="slide-next" onclick="next()">
+                    <i class="fa fa-angle-right"></i>
+                </button>
+            </div>
+            <script>
+                autoplay();
+            </script>
+
+        </div>
+    </section>
+    <section id="welcome" class="bg-white section-padding" style="margin-top: 150px;">
+        <div class="container">
+            <div class="section-content">
+                <div class="row" style="height: 500px;">
+                    <div class="left-content">
+                        <img src="img/hoi an 2_1563176621 (1).jpg"
+                            style="width: 90%; margin: 100px 5px; border-radius: 10px;">
+                    </div>
+
+                    <div class="right-content">
+                        <h1 class="sec-title" style="color: orange; margin-top: 100px;">Cảm nhận hương vị Hội An từ cách
+                            xa hàng trăm cây số</h1>
+                        <span style="margin-left: 20px; width: 80%;">
+                            Có thể nói rằng ai đến phố cổ mà chưa được thưởng thức món cơm gà Hội An lừng danh thì xem
+                            như chưa được trải nghiệm trọn vẹn ẩm thực của mảnh đất miền Trung này.
+
+                            Nếu ẩm thực Huế được biết đến bởi nét tinh tế và điệu đà với vô vàn món ăn vừa đẹp vừa ngon
+                            và được chế biến theo phong cách cung đình thanh tao, ẩm thực miền Tây chiếm trọn cảm tình
+                            của nhiều người bởi hương vị ngọt ngào, gần gũi thì ẩm thực Hội An nói riêng và xứ Quảng nói
+                            chung lại không lẫn vào đâu được vì sự thô mộc, bình dị mà đậm đà mang đủ vị mặn mà ẩn chứa
+                            trong mỗi món ăn. Thật vậy, cơm gà Hội An được nhiều thực khách yêu thích bởi vì người tìm
+                            thấy được cái hồn xứ Quảng trong mỗi thành phần làm nên nó.
+                        </span>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End of Welcome Section --> <!-- Special Dishes Section -->
+    <section id="special-dishes" class="bg-grey section-padding">
+        <div class="container">
+            <div class="section-content">
+                <div class="heading-section text-center" style="padding: 10px; text-align: center;">
+
+                    <h2>
+                        Món đặc biệt!
+                    </h2>
+                </div>
+                <div class="row" style="height: 550px;">
+                    <div class="left-des">
+
+                        <h2 class="special-number">01. CƠM GÀ HỘI AN</h2>
+                        <div class="dishes-text">
+
+                            <p> Cơm gà Hội An là một trong những món ngon được khách du lịch yêu thích nhất
+                                khi đến thăm phố cổ. Với cơm nghệ thơm dẻo và gà xé phay mềm ngọt, gà Hội An không cầu
+                                kỳ mà bình dị, mộc mạc như chính tính cách của người dân xứ Quảng, đưa hương vị đi sâu
+                                vào từng giác quan của người thưởng thức.</p>
+                            <h3 class="spec-price">45.000 VNĐ</h3>
+                            <h4 class="del-price">50.000 VNĐ</h4>
+                            <a href="#reservation" class="btn-primary" >Đặt bàn</a>
+                        </div>
+                    </div>
+
+                    <div class="right-pic">
+                        <img src="img/PicDemo1.jpg" style="width: 85%; height: 90%; margin-left: 45px;">
+                    </div>
+                </div>
+                <div class="row" style="height: 550px; margin-right: 30px;">
+                    <div class="left-pic">
+                        <img src="img/picdemo2.jpg" style="width: 85%; height: 90%; margin-left: 50px;">
+                    </div>
+                    <div class="right-des">
+
+                        <h2 class="special-number">02. ĐÙI GÀ CHIÊN MẮM
+                        </h2>
+                        <div class="dishes-text">
+
+                            <p>Đùi gà sau khi được tẩm ướp gia vị sẽ được chiên giòn và thơm phức, sau đó
+                                ăn kèm với nước mắm chua ngọt cay nồng, tạo nên hương vị đặc trưng và khó quên. Phù hợp
+                                để dùng trong các bữa tiệc gia đình, liên hoan bạn bè.</p>
+                            <h3 class="spec-price">45.000 VNĐ</h3>
+                            <h4 class="del-price">50.000 VNĐ</h4>
+                            <a href="#reservation" class="btn-primary" >Đặt bàn</a>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="row" style="height: 550px;">
+                    <div class="left-des">
+
+                        <h2 class="special-number">03. CƠM GÀ CÀ RI</h2>
+                        <div class="dishes-text">
+
+                            <p>Được chế biến từ gà tươi và cà ri, kết hợp cùng các loại rau củ như khoai
+                                tây, cà rốt, hành tây, ớt và nhiều gia vị khác. Thịt gà mềm và thấm đều vị cà ri, thêm
+                                mùi thơm tự nhiên của rau củ, tạo thành một món ăn ngon và bổ dưỡng.</p>
+                            <h3 class="spec-price">40.000 VNĐ</h3>
+                            <h4 class="del-price">48.000 VNĐ</h4>
+                            <a href="#reservation" class="btn-primary">Đặt bàn</a>
+                        </div>
+                    </div>
+
+                    <div class="right-pic">
+                        <img src="img/chic_cur.jpg" style="width: 85%; height: 90%; margin-left: 45px;">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="partner" class="bg-white">
+        <div class="container" style="width: 1140px; margin: 0px auto;">
+            <div class="section-content">
+                <div class="heading-section">
+                    <h2>
+                        ĐỐI TÁC BÁN HÀNG
+                    </h2>
+                </div>
+
+
+                <img class="partners" src="img/partner1.jpg" style="margin-left: 40px;">
+                <img class="partners" src="img/partner2.jpg">
+                <img class="partners" src="img/shopee.jpg">
+                <img class="partners" src="img/partner3.png">
+                <img class="partners" src="img/momo-logo.png">
+            </div>
+        </div>
+    </section>
+    <section id="testimonial" style="background-image: url(img/bg-testi.jpg); height: 600px;">
+        <div class="container">
+            <div class="section-content">
+                <div class="heading-section" style="text-align: center; padding-top: 35px;">
+
+                </div>
+                <div class="row">
+                    <!-- Testimonial -->
+                    <div class="testi-content">
+                        <!-- <div class="testi-item">
+                        <p class="testi-text">Thật khó để diễn tả hết bằng lời những nét riêng trong ẩm thực Hội An, bởi cái gì đẹp, cái gì ngon, mà đặc biệt là cái gì tinh tế thì thường để dành cho sự cảm nhận.</p>
+                        <h3 class="testi-author">Nguyễn Tuân</h3>
+                       
+                    </div> -->
+                        <div class="testi-item">
+                            <p class="testi-text" id="testi-ptext"> Nhưng mà cũng chưa phải là Hội An, nếu chưa ghé một
+                                hàng quán bất
+                                chợt nào đó mà ăn một tô cao lầu, sáng sớm tìm một nơi ăn bánh ướt thịt nướng, tối tối
+                                lại ghé một chốn thật yên bình để thưởng thức cơm gà... Thế mới thực sự là cảm nhận cho
+                                thỏa cái vị Hội An.</p>
+                            <script>autoplaytext()</script>
+                            <h3 class="testi-author">Nguyễn Tuân</h3>
+                        </div>
+                    </div>
+                    <!-- End of Testimonial -->
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End of Testimonial Section--> <!-- Team Section -->
+    <section id="team" class="bg-white section-padding">
+        <div class="container" style="width: 1140px; height: 665x; margin: 0px auto; padding-bottom: 80px;">
+            <div class="section-content">
+                <div class="heading-section">
+                    <h2>
+                        VỀ CHÚNG TÔI
+                    </h2>
+                </div>
+
+                <div id="mem-lst" style="height: 450px;">
+                    <div class="team-card" style="width: 30%; float: left;">
+                        <img src="img/teamPic2.jpg" style="height: 450px; border-radius: 20px; box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.3);" >
+                        <div class="team-desc">
+                            <h2>Đỗ Thị Phương Anh</h2>
+                            <h3>CEO</h3>
+                        </div>
+                    </div>
+
+                    <div class="team-card" style="width: 30%; float: left;">
+                        <img src="img/chef-5.jpg" style="height: 450px; width: 300px;">
+                        <div class="team-desc">
+                            <h2>Phan Tuấn Hải</h2>
+                            <h3>Bếp trưởng</h3>
+                        </div>
+                    </div>
+                    <div class="team-card" style="width: 30%; float: left;">
+                        <img src="img/chef-3.jpg" style="height: 450px;">
+                        <div class="team-desc">
+                            <h2>Trần Văn Khang</h2>
+                            <h3>Bếp phó</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <section id="reservation" style="background-image: url(img/chef-4807317_960_720.jpg);">
+        <div id="reser-form" style="background-color: white; padding-top: 10px;">
+            <div class="heading-section">
+
+                <h2 style="margin-top: -10px">
+                    Đặt bàn ngay!
+                </h2>
+            </div>
+            <form method="post" name="reser">
+                <div class="row">
+                    <div class="form-group">
+                        <input type="text" class="form-control" id="name" name="name" placeholder="Họ tên">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control" id="email" name="email" placeholder="Email">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control" id="phoneNumber" name="phoneNumber"
+                            placeholder="Số điện thoại">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control" id="datetime" name="datetime" placeholder="Thời gian">
+                    </div>
+
+                    <div class="form-group">
+                        <input type="number" class="form-control" placeholder="Số người">
+                    </div>
+
+
+                    <div class="form-group">
+                        <textarea class="form-control" style="height: 100px;"
+                            placeholder="Hãy cho chúng tôi biết thêm về yêu cầu của bạn..."></textarea>
+                    </div>
+                    <div class=" text-center">
+                        <button class="btn-primary" style="width: 200px; height: 40px; border: 0px; margin-top: 20px;"
+                            type="submit" name="submit">Đặt bàn</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </section>
+    <!-- <div class="foot-div" style="height: 100px;">
+    </div> -->
+    <footer style="margin-top: 40px;">
+        <div class="container">
+            <div class="row">
+
+                <div class="foot-nav" style="margin-left: 100px;">
+                    <h4>DANH MỤC MÓN ĂN</h4>
+                    <ul class="list-unstyled">
+                        <li><a href="#">Gà Hội An</a></li>
+                        <li><a href="#">Gà chiên mắm</a></li>
+                        <li><a href="#">Gà sốt / cà ri</a></li>
+                        <li><a href="#">Món ăn kèm</a></li>
+                        <li><a href="#">Nước uống</a></li>
+                    </ul>
+                </div>
+                <div class="foot-nav">
+                    <h4>VỀ CƠM GÀ HỘI AN</h4>
+                    <ul class="list-unstyled">
+                        <li><a href="#">Câu chuyện của chúng tôi</a></li>
+                        <li><a href="#">Giới thiệu</a></li>
+                        <li><a href="#">Tin khuyến mãi</a></li>
+                        <li><a href="#">Tin tuyển dụng</a></li>
+                        <li><a href="#">Hệ thống nhà hàng</a></li>
+                    </ul>
+                </div>
+                <div class="foot-nav">
+                    <h4>Liên hệ</h4>
+                    <ul class="list-unstyled">
+                        <li><i class="fas fa-map-marker-alt"></i> Địa chỉ: 27 Phạm Hồng Thái, TP.Hải Dương, tỉnh Hải
+                            Dương</li>
+                        <li><i class="fas fa-phone"></i> Điện thoại: 0123456789</li>
+                        <li><i class="fas fa-envelope"></i> Email: ducanh_comgahoianvietnam@gmail.com</li>
+                    </ul>
+                </div>
+                <div class="foot-nav">
+                    <img id="foot-logo" src="img/logock-removebg-preview.png">
+                </div>
+            </div>
+
+            <div class="row">
+                <div>
+                    <p class="text-center"></p>
+                </div>
+            </div>
+            <div id="bot-div">
+                <img src="img/logo_footer.png">
+                <p>© 2023 Cơm gà Hội An. All rights reserved. Author: Pham Le Duc Anh</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Add active class to the current button (highlight it)
+        //var header = document.getElementById("myDIV");
+        var btns = document.getElementsByClassName("mnbar-item");
+        for (var i = 0; i < btns.length; i++) {
+          btns[i].addEventListener("click", function() {
+          var current = document.getElementsByClassName("menu_active");
+          current[0].className = current[0].className.replace(" menu_active", "");
+          this.className += " menu_active";
+          });
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,46 @@
+.more-fo{
+    width: 30%;
+    float: left;
+}
+.more-fo img{
+    height: 70px;
+    width: 100px;
+    border-radius: 15px;
+}
+input.round-btn {
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    background-color: white;
+    color: black;
+    font-size: large;
+    border: 1px solid black;
+    box-shadow: 2px 2px 2px rgba(0,0,0,0.2);
+    cursor: pointer;
+}
+#numtxt{
+    text-align: center; 
+    width: 30px;
+    height: 30px;
+    margin: 0px 10px;
+}
+hr {
+    width: 100%;
+    size: 1px;
+    color: #393646;
+    margin-top: 20px;
+}
+.right-des .btn-primary{
+    margin-top: 80px;
+    margin-right: -80px;
+    height: 45px;
+    font-size: large;
+    float: right;
+}
+
+  
+  
+  
+  
+  
+  

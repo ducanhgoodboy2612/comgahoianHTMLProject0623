@@ -1,0 +1,156 @@
+
+
+#left-size {
+    width: 18%;
+    background-color: #222d32;
+    float: left;
+}
+
+
+.sidebar {
+    width: 250px;
+    background-color: #222d32;
+    float: left;
+    height: 647px;
+    margin-top: 100px;
+  }
+  .sidebar i {
+    float: right;
+  }
+  
+  .menu {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .main-menu {
+    background-color: #222d32;
+  }
+  
+  .menu li a {
+    display: block;
+    padding: 20px;
+    color: #fff;
+    text-decoration: none;
+  }
+  
+ 
+  
+  .submenu {
+    display: none;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    margin-left: 20px;
+  }
+  
+  .submenu li a {
+    display: block;
+    padding: 10px;
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  .submenu li:hover {
+    background-color: #888888;
+  }
+
+  #right-side {
+    width: 80%;
+    float: right;
+  }
+
+  .bt {
+    background-color: #0965A0;
+    color: white;
+    width: 120px;
+    height: 30px;
+    float: left;
+    margin-left: 20px;
+  }
+  #tb-pro th {
+    background-color: #0965A0;
+    color: white;
+  }
+  #tb-pro tr td img:hover {
+    cursor: pointer;
+  }
+  .even-row{
+    background-color: #E8E7E5;
+  }
+  .search {
+    height: 30px;
+    padding-top: 5px;
+  }
+  .change {
+    height: 30px;
+    padding-top: 5px;
+  }
+  .del {
+    height: 30px;
+    padding-top: 5px;
+  }
+#header {
+    width: 100%; 
+    height: 60px;
+    margin-top: 100px;
+}
+#header h2 {
+    margin-left: 370px;
+  
+    margin-top: 20px; 
+    line-height: 60px;
+}
+#top {
+    width: 100%;
+    height: 100px;
+    margin-top: 80px;
+}
+#bot {
+    width: 100%;
+    height: 100px;
+    margin-top: 5px;
+}
+#he-left {
+  width: 500px; 
+  margin-left: 20px;
+}
+#he-left img {
+  width: 30px; 
+  float: left;
+  margin: 15px 10px 0px 50px;
+}
+#he-left a {
+  color: orangered;
+  float: left;
+  text-decoration: none;
+  cursor: pointer;
+}
+#log-out{
+  color: orangered;
+  margin-top: 23px;
+}
+.mana {
+    width: 18%;
+    height: 100%;
+    margin-right: 5px;
+    float: left;
+}
+.mana img {
+    width: 25px;
+    margin-top: 6px;
+    margin-left: 6px;
+}
+.mana h4 {
+    
+    color: white;
+    margin-top: 45px;
+    margin-left: 26px;
+}
+.mana a {
+    text-decoration: none;
+    color: white;
+    margin-top: 45px;
+    margin-left: 26px;
+}
